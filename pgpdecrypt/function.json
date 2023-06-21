@@ -1,0 +1,20 @@
+{
+  "scriptFile": "__init__.py",
+  "disabled": true,
+  "bindings": [
+    {
+      "name": "encryptedTriggerBlob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "test/{name}.{filetype}.gpg",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "name": "decryptedBlob",
+      "direction": "out",
+      "type": "blob",
+      "path": "test/{name}.{filetype}",
+      "connection": "AzureWebJobsStorage"
+    }
+  ]
+}
